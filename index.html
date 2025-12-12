@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollería Pamy's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <header class="header-logo">
+        <div class="brand">
+            <img src="assets/logo.png" alt="Logo Pamy's" class="logo" onerror="this.style.display='none'">
+
+        </div>
+
+        <nav>
+            <button onclick="showSection('inicio')">Inicio</button>
+            <button onclick="showSection('menu')">Menú</button>
+            <button onclick="showSection('contacto')">Contacto</button>
+            <button onclick="showSection('carrito')">🛒 Carrito</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="section active">
+            <div class="hero">
+                <img src="assets/pollo.jpg" class="hero-img" alt="Pollo Pamy's" onerror="this.src='https://via.placeholder.com/800x300'">
+                <div class="hero-text">
+                    <h2>Bienvenido</h2>
+                    <p>Aquí el pollo es sabroso, fresco y con sabor casero real. Pamys: pollo bien hecho.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Conoce nuestras promociones disponibles</h2>
+            <p class="disclaimer"> 
+              Precios de las promociones 
+              válidos únicamente hasta 
+              el 31 de Diciembre de 2025,
+              Aplican restricciones.
+            </p>
+        
+            <div class="paquetes-container">
+                <div class="card paquete">
+                    <img src="assets/4piezasfrito.jpg" alt="Paquete Mini" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Paquete Mini</h3>
+                        <p class="price">$130</p>
+                        <p class="desc">4 piezas de follo frito + 200g de papas fritas a la francesa.</p>
+                        <button class="btn-add" onclick="addToCart('Paquete Mini', 130)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card paquete">
+                    <img src="assets/8piezasfrito.jpg" alt="Paquete Súper" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Paquete Súper</h3>
+                        <p class="price">$245</p>
+                        <p class="desc">8 piezas de follo frito + 500g de papas fritas a la francesa.</p>
+                        <button class="btn-add" onclick="addToCart('Paquete Súper', 245)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card paquete">
+                    <img src="assets/megaimg.jpg" alt="Paquete Mega" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Paquete Mega</h3>
+                        <p class="price">$380</p>
+                        <p class="desc">12 piezas de follo frito + 600g de papas fritas a la francesa + Refresco 1000mL.</p>
+                        <button class="btn-add" onclick="addToCart('Paquete Mega', 380)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card paquete">
+                    <img src="assets/macroimg.jpg" alt="Paquete Macro" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Paquete Macro</h3>
+                        <p class="price">$440</p>
+                        <p class="desc">15 piezas de follo frito + 600g de papas fritas a la francesa. + Salsa de la casa + Refresco 2500mL</p>
+                        <button class="btn-add" onclick="addToCart('Paquete Macro', 440)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <h2 class="section-title">Nuestro Menú a la carta</h2>
+            <p class="hero-text"> Elige algo en específico entre nuestra gran variedad de opciones que tenemos para ofrecerte.</p>
+            <div class="menu-list">
+
+                <div class="card menu-item">
+                    <img src="assets/pollo-doble.jpg" alt="Pollo frito doble" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Pollo frito doble</h3>
+                        <p>2 piezas surtidas.</p>
+                        <span class="precio">$80</span>
+                        <button class="btn-add" onclick="addToCart('Pollo frito doble', 80)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="assets/pollo-triple.jpg" alt="Pollo frito triple" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Pollo frito triple</h3>
+                        <p>4 piezas surtidas.</p>
+                        <span class="precio">$90</span>
+                        <button class="btn-add" onclick="addToCart('Pollo frito triple', 90)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="assets/hamburguesa.jpg" alt="Hamburguesa" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Hamburguesa</h3>
+                        <p>Clásica con queso.</p>
+                        <span class="precio">$80</span>
+                        <button class="btn-add" onclick="addToCart('Hamburguesa', 80)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="assets/hamburguesa-especial.jpg" alt="Hamburguesa especial" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Hamburguesa Especial</h3>
+                        <p>Doble carne y tocino.</p>
+                        <span class="precio">$95</span>
+                        <button class="btn-add" onclick="addToCart('Hamburguesa especial', 95)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="card menu-item">
+                    <img src="assets/alitas.jpg" alt="Alitas" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Alitas de pollo</h3>
+                        <p>8 alitas (BBQ, Buffalo).</p>
+                        <span class="precio">$90</span>
+                        <button class="btn-add" onclick="addToCart('Alitas', 90)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="card menu-item">
+                    <img src="assets/nuggets.jpg" alt="Nuggets" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Nuggets</h3>
+                        <p>8 piezas con salsas.</p>
+                        <span class="precio">$90</span>
+                        <button class="btn-add" onclick="addToCart('Nuggets', 90)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="card menu-item">
+                    <img src="assets/tiras.jpg" alt="Tiras" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Tiras de pollo</h3>
+                        <p>Orden con salsas.</p>
+                        <span class="precio">$110</span>
+                        <button class="btn-add" onclick="addToCart('Tiras de pollo', 110)">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="assets/refresco.jpg" alt="Refrescos" onerror="this.src='https://via.placeholder.com/200'">
+                    <div class="card-content">
+                        <h3>Refrescos</h3>
+                        <p>600 ml línea Coca-Cola.</p>
+                        <span class="precio">$30</span>
+                        <button class="btn-add" onclick="addToCart('Refresco', 30)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <h2 class="section-title">Contacto</h2>
+            <div class="form-container">
+                <form onsubmit="event.preventDefault(); alert('Mensaje enviado');">
+                    <label>Nombre:</label>
+                    <input type="text" required placeholder="Tu nombre">
+                    <label>Correo:</label>
+                    <input type="email" required placeholder="tucorreo@ejemplo.com">
+                    <label>Mensaje:</label>
+                    <textarea required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="carrito" class="section">
+            <h2 class="section-title">Tu Carrito</h2>
+            <p class="disclaimer"> Estás a un paso complacer a tu antojo...</p>
+            <br>
+            <div class="carrito-box">
+                <div id="carrito-lista">
+                    <p style="text-align: center; color: #888;">Tu carrito está vacío. Agrega algún producto.</p>
+                </div>
+                
+                <div class="carrito-total-container">
+                    <span>Total a pagar:</span>
+                    <span id="total-precio">$0</span>
+                </div>
+
+                <button class="btn-submit" onclick="alert('Funcionalidad de pago no implementada')">Proceder al Pago</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-col">
+                <h3>Pollería Pamy's</h3>
+                <p>© 2025 - Durango, Dgo.</p>
+                <p>¡El sabor que te hace volver!</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>
+                    📍 <a href="https://maps.app.goo.gl/y2qByuJsbiV6yBWo8" target="_blank">
+                        Ver ubicación en Google Maps
+                    </a>
+                </p>
+                <p>
+                    📞 <a href="tel:+526188361213">618 836 1213</a>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Horario</h3>
+                <p>🕒 Abierto todos los días:</p>
+                <p class="horario-destacado">9:30 a.m. – 6:30 p.m.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Variable para guardar el total acumulado
+        let totalAcumulado = 0;
+
+        // 1. Función para cambiar de pestaña
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        // 2. Función para agregar al carrito y sumar
+        function addToCart(producto, precio) {
+            const lista = document.getElementById('carrito-lista');
+            const totalDisplay = document.getElementById('total-precio');
+
+            // Si es el primer producto, quitamos el mensaje de "vacío"
+            if(totalAcumulado === 0) {
+                lista.innerHTML = ''; 
+            }
+
+            // A. Agregar visualmente el producto a la lista
+            const item = document.createElement('div');
+            item.className = 'carrito-item';
+            item.innerHTML = `
+                <span>${producto}</span>
+                <strong>$${precio}</strong>
+            `;
+            lista.appendChild(item);
+
+            // B. Sumar al total
+            totalAcumulado += precio;
+            
+            // C. Actualizar el texto del total
+            totalDisplay.innerText = '$' + totalAcumulado;
+
+            // D. Alerta de confirmación
+            alert(`¡Agregaste ${producto} al carrito!`);
+        }
+    </script>
+</body>
+</html>
